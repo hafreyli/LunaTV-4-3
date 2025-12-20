@@ -118,8 +118,8 @@ jobs:
       - name: Create manifest list and push
         working-directory: /tmp/digests
         run: |
-          docker buildx imagetools create -t ghcr.io/hafreyli/LunaTV:${{ github.event.inputs.tag || 'latest' }} \
-            $(printf 'ghcr.io/hafreyli/LunaTV@sha256:%s ' *)
+          docker buildx imagetools create -t ghcr.io/hafreyli/lunatv:${{ github.event.inputs.tag || 'latest' }} \
+            $(printf 'ghcr.io/hafreyli/lunatv@sha256:%s ' *)
 
   cleanup-refresh:
     runs-on: ubuntu-latest
